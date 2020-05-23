@@ -29,7 +29,7 @@ for row in records:
     else:
         items.append({'ean': row[IndBarra], 'preco': row[IndPreco], 'estoque':row[IndQuantidade]}) 	#Se não houver promoção, segue com o preço cheio
 
-farma = json.dumps(items, indent=2, sort_keys = False) 							#Cria uma lista JSON no modelo: [ { "ean":789000000, "preco":1.99,"estoque":38},{ "ean":789000001, "preco":3.99,"estoque":18},...]
+farma = json.dumps(items, indent = 2, sort_keys = False) 							#Cria uma lista JSON no modelo: [ { "ean":789000000, "preco":1.99,"estoque":38},{ "ean":789000001, "preco":3.99,"estoque":18},...]
 
 with open("pediuFarma.json", "w") as outfile:  								#Cria um arquivo .json com a lista json acima
     outfile.write(farma) 
